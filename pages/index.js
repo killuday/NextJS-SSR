@@ -29,7 +29,7 @@ export default function Home({todos}) {
           loading
         </div>):(
           todos?.map((todo)=>(
-            <div className='lg:text-[1.5rem] text-[1.1rem] truncate pl-2 pr-2 font-semibold mb-2 text-white p-3 lg:p-5 bg-gradient-to-r from-purple-500 to-pink-500 '  key={todo.id}>
+            <div className='lg:text-[1.5rem] text-[1.1rem] truncate pl-2 pr-2 font-semibold  text-white hover:text-pink-400 ease-in duration-300  p-3 lg:p-5 bg-black '  key={todo.id}>
               {todo.id}:{todo.title}
             </div>
           ))
