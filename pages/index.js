@@ -21,14 +21,15 @@ export default function Home({todos}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='container mx-auto shadow-xl text-center'>
-        <h1 className='font-bold text-[4rem] bg-black pb-3 text-pink-500 '>Data Fetched On Server Side With NextJS</h1>
+        <h1 className='font-bold text-[.9rem]  lg:text-[4rem] bg-black lg:pb-3 pb-1
+         text-pink-500 '>Data Fetched On Server Side With NextJS</h1>
 
       {todos?.length===0 ?(
         <div className="loading">
           loading
         </div>):(
           todos?.map((todo)=>(
-            <div className='text-[1.5rem] font-semibold mb-2 text-white p-5 bg-gradient-to-r from-purple-500 to-pink-500 '  key={todo.id}>
+            <div className='lg:text-[1.5rem] text-[.7rem] truncate pl-2 pr-2 font-semibold mb-2 text-white p-1 lg:p-5 bg-gradient-to-r from-purple-500 to-pink-500 '  key={todo.id}>
               {todo.id}:{todo.title}
             </div>
           ))
