@@ -28,7 +28,7 @@ export default function Home({todos}) {
         <div className="loading">
           loading
         </div>):(
-          todos?.map((todo)=>(
+          todos?.slice(0, 20).map((todo)=>(
             <div className='lg:text-[1.5rem] text-[1.1rem] truncate pl-2 pr-2 hover:text-pink-400 ease-in duration-300 font-semibold  text-white p-3 lg:p-5 bg-black '  key={todo.id}>
               {todo.id}:{todo.title}
             </div>
@@ -36,17 +36,14 @@ export default function Home({todos}) {
         
       )}
       </div>
-
-     
-
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by ❤️
-         Uday
+          Powered by 
+         Uday Bhanu❤️
         </a>
       </footer>
     </div>
