@@ -13,9 +13,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ todos }) {
-  {
-    console.log(todos);
-  }
   return (
     <div className={styles.container}>
       <Head>
