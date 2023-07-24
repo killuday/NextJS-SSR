@@ -35,11 +35,11 @@ export default function Home({ todos }) {
         {todos &&
           todos.results.map((items, index) => (
             <div
-              className="md:flex items-center mx-auto max-w-3xl p-10 rounded-3xl justify-center mt-12 bg-gray-950 "
+              className="md:flex items-center mx-auto max-w-xs md:max-w-2xl lg:max-w-3xl  p-10 rounded-3xl justify-center mt-5 md:mt-12 bg-gray-800 md:bg-gray-950 "
               key={index}
             >
               <div className="">
-                <img className="rounded-3xl  object-cover" src={items.image} alt="" />
+                <img className="rounded-3xl w-full  object-cover" src={items.image} alt="" />
               </div>
               <div className="md:pl-10 text-center md:text-start">
                 <h3 className="text-white pt-5 md:pt-0     font-bold text-3xl">
