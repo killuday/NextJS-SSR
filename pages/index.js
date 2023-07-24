@@ -31,60 +31,70 @@ export default function Home({ todos }) {
           Data Fetched On Server Side With NextJS
         </h1>
         <div className="bg-black   ">
-
-        {todos &&
-          todos.results.map((items, index) => (
-            <div
-              className="md:flex items-center mx-auto max-w-xs md:max-w-2xl lg:max-w-3xl  p-10 rounded-3xl justify-center mt-5 md:mt-12 bg-gray-800 md:bg-gray-950 "
-              key={index}
-            >
-              <div className="">
-                <img className="rounded-3xl w-full  object-cover" src={items.image} alt="" />
+          {todos &&
+            todos.results.map((items, index) => (
+              <div
+                className="md:flex  mx-auto max-w-xs md:max-w-2xl lg:max-w-3xl   rounded-3xl  mt-5 md:mt-12 bg-gray-800 md:bg-gray-950 "
+                key={index}
+              >
+                <div className="">
+                  <img
+                    className="md:rounded-l-3xl md:rounded-tr-none w-full h-full rounded-t-3xl  object-cover"
+                    src={items.image}
+                    alt=""
+                  />
+                </div>
+                <div className="md:pl-10 text-center pb-8 pt-5   md:pb-5 md:text-start">
+                  <h3 className="text-white md:pt-5 md:pt-0     font-bold text-3xl">
+                    {items.name}
+                  </h3>
+                  <h6 className="text-white font-semibold  text-2xl mt-3">
+                    Status :{" "}
+                    <span
+                      className={`${
+                        items.status === "Alive"
+                          ? "text-green-500"
+                          : "text-red-600"
+                      }`}
+                    >
+                      {items.status}
+                    </span>
+                  </h6>
+                  <h6 className="text-white mt-3  font-semibold text-2xl">
+                    Gender:{" "}
+                    <span
+                      className={`${
+                        items.gender === "Male"
+                          ? "text-pink-500"
+                          : items.gender === "Female"
+                          ? "text-sky-500"
+                          : "text-gray-300"
+                      }`}
+                    >
+                      {items.gender}
+                    </span>
+                  </h6>
+                  <h6 className="text-white mt-3  font-semibold text-2xl">
+                    Species:{" "}
+                    <span
+                      className={`${
+                        items.species === "Alien"
+                          ? "text-green-700"
+                          : "text-blue-500"
+                      }`}
+                    >
+                      {items.species}
+                    </span>
+                  </h6>
+                  <h6 className="text-white text-xl font-semibold mt-2 ">
+                    Type: {items.type || "unknown"}
+                  </h6>
+                  <p className="text-white  font-semibold text-xl mt-2 ">
+                    Last Known Location: {items.location.name}{" "}
+                  </p>
+                </div>
               </div>
-              <div className="md:pl-10 text-center md:text-start">
-                <h3 className="text-white pt-5 md:pt-0     font-bold text-3xl">
-                  {items.name}
-                </h3>
-                <h6 className="text-white font-semibold  text-2xl mt-3">
-                  Status :{" "} 
-
-                  <span
-                    className={`${
-                      items.status === "Alive"
-                        ? "text-green-500"
-                        : "text-red-600"
-                    }`}
-                  >
-                     {items.status}
-                  </span>
-                </h6>
-                <h6 className="text-white mt-3  font-semibold text-2xl">
-                  Gender: <span className={`${
-                      items.gender === "Male"
-                        ? "text-pink-500"
-                        : "text-sky-500"
-                    }`}>
-
-                    {items.gender}
-                    </span> 
-                </h6>
-                <h6 className="text-white mt-3  font-semibold text-2xl">
-                  Species:{" "}
-                  <span
-                    className={`${
-                      items.species === "Alien"
-                        ? "text-green-700"
-                        : "text-blue-500"
-                    }`}
-                  >
-                    {items.species}
-                  </span>
-                </h6>
-                <h6 className="text-white text-xl font-semibold mt-2 ">Type: {items.type || "unknown" }</h6>
-                <p className="text-white  font-semibold text-xl mt-2 ">Last Known Location: {items.location.name} </p>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
       <footer className={styles.footer}>
