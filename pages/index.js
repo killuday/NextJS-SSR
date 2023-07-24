@@ -34,7 +34,7 @@ export default function Home({ todos }) {
           {todos &&
             todos.results.map((items, index) => (
               <div
-                className="md:flex  mx-auto max-w-xs md:max-w-2xl lg:max-w-3xl   rounded-3xl  mt-5 md:mt-12 bg-gray-800 md:bg-gray-950 "
+                className="md:flex  mx-auto max-w-xs md:max-w-2xl lg:max-w-3xl   rounded-3xl  mt-5 md:mt-12 bg-gray-900 md:bg-gray-950 "
                 key={index}
               >
                 <div className="">
@@ -45,7 +45,7 @@ export default function Home({ todos }) {
                   />
                 </div>
                 <div className="md:pl-10 text-center pb-8 pt-5   md:pb-5 md:text-start">
-                  <h3 className="text-white md:pt-5 md:pt-0     font-bold text-3xl">
+                  <h3 className="text-white  md:pt-0  hover:text-violet-300 hover:ease-in-out duration-200 cursor-pointer   font-bold text-3xl">
                     {items.name}
                   </h3>
                   <h6 className="text-white font-semibold  text-2xl mt-3">
@@ -79,18 +79,18 @@ export default function Home({ todos }) {
                     <span
                       className={`${
                         items.species === "Alien"
-                          ? "text-green-700"
-                          : "text-blue-500"
+                          ? "text-green-600"
+                          : "text-yellow-400"
                       }`}
                     >
                       {items.species}
                     </span>
                   </h6>
-                  <h6 className="text-white text-xl font-semibold mt-2 ">
-                    Type: {items.type || "unknown"}
+                  <h6 className="text-white text-xl \font-semibold mt-2 ">
+                    Type: <span className="hover:ease-in-out duration-200 hover:text-orange-500 ">  {items.type || "unknown"}</span>
                   </h6>
                   <p className="text-white  font-semibold text-xl mt-2 ">
-                    Last Known Location: {items.location.name}{" "}
+                    Last Known Location: <span className="hover:ease-in-out duration-200 hover:text-orange-500">{items.location.name}</span> 
                   </p>
                 </div>
               </div>
