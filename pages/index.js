@@ -106,9 +106,9 @@ export default function Home({ todos, currentPage }) {
                       {items.species}
                     </span>
                   </h6>
-                  <h6 className="text-white text-xl \font-semibold mt-2 ">
+                  <h6 className="text-white text-xl font-semibold mt-2 ">
                     Type:{" "}
-                    <span className="hover:ease-in-out duration-200 hover:text-orange-500 ">
+                    <span className={`${items.type?"":"text-stone-700"} hover:ease-in-out duration-200 hover:text-orange-500 `}>
                       {" "}
                       {items.type || "unknown"}
                     </span>
