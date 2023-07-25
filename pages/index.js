@@ -115,7 +115,7 @@ export default function Home({ todos, currentPage }) {
                   </h6>
                   <p className="text-white  font-semibold text-xl mt-2 ">
                     Last Known Location:{" "}
-                    <span className="hover:ease-in-out duration-200 hover:text-orange-500">
+                    <span className={`${items.location.name === "unknown" ? "text-stone-700" : "text-teal-400"} hover:ease-in-out duration-200 hover:text-orange-500`}>
                       {items.location.name}
                     </span>
                   </p>
