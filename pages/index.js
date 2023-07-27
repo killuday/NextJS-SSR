@@ -75,7 +75,7 @@
             {todos &&
               todos.results.map((items, index) => (
                 <div
-                  className="md:flex shadow-alligator mx-auto max-w-xs md:max-w-2xl lg:max-w-3xl   rounded-3xl  mt-5 md:mt-12 bg-gray-900 md:bg-gray-950 "
+                  className="md:flex shadow-alligator mx-auto max-w-xs md:max-w-2xl lg:max-w-3xl   rounded-3xl  mt-10 md:mt-12 bg-gray-900 md:bg-gray-950 "
                   key={index}
                 >
                   <div className="">
