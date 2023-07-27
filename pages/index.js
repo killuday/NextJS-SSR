@@ -93,9 +93,9 @@
                       Status :{" "}
                       <span
                         className={`${
-                          items.status === "Alive"
-                            ? "text-green-500"
-                            : "text-red-600"
+                          items.status === "Alive"? "text-green-500":items.status=== "Dead"?"text-red-600":"text-stone-700"
+                         
+                            
                         }`}
                       >
                         {items.status}
