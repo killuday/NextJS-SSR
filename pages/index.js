@@ -145,10 +145,10 @@
               ))}
           </div>
         </div>
-        <div className="flex justify-center space-x-2  md:space-x-5 mt-14">
+        <div className="flex justify-center  space-x-2  md:space-x-5 mt-14">
           {currentPage > 1 && (
             <button
-              className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded"
+              className="bg-pink-500 hover:bg-pink-600 text-white px-3 text-xs lg:text-lg lg:px-4 py-2 rounded"
               onClick={handlePreviousPage}
             >
               Previous
@@ -164,7 +164,7 @@
                   pageNumber === currentPage
                     ? "bg-pink-600"
                     : "bg-pink-500 hover:bg-pink-600"
-                } text-white px-3 py-2 rounded`}
+                } text-white px-2 lg:px-3 py-1 text-sm lg:text-lg lg:py-2 rounded`}
                 onClick={() => handlePageNavigation(pageNumber)}
               >
                 {pageNumber}
@@ -175,7 +175,7 @@
 
           {currentPage < (todos.info && todos.info.pages) && (
             <button
-              className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded"
+              className="bg-pink-500 hover:bg-pink-600 text-white px-3 text-xs lg:text-lg lg:px-4 py-2 rounded"
               onClick={handleNextPage}
             >
               Next
